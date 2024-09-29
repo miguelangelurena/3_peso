@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+
+jobs:
+  build-lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          echo "$HOME/.bun/bin" >> $GITHUB_PATH
+      - name: Set Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+      - run: bun install
+      - run: bun run build
+      - run: bun run lint
+      - run: bun --if-present test
