@@ -51,7 +51,12 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+      fontFamily: {
+        cursive: ["Bad Script", "cursive"],
+        outline: ["Londrina Outline", "sans-serif"],
+      },
     },
   },
+  // eslint-disable-next-line global-require
   plugins: [require("tailwindcss-animate")],
 };
