@@ -1,22 +1,71 @@
 ---
 import { ChevronsDown } from "lucide-astro";
+
+import Logo from "./vectors/logo.astro";
 ---
 
-<section
-  class="relative flex h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white sm:h-[100vh]"
->
-  <video
-    class="absolute -z-10 h-full w-full object-cover"
-    muted
-    autoplay
-    loop
-    disablepictureinpicture
-    playsinline
+<section class="zdv-hero h-[45vh] max-h-[1900px] sm:h-[100vh]">
+  <div
+    class="relative hidden h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]"
+    data-zitdevs-id="video-content"
   >
-    <source src="/bg-video.mp4" type="video/mp4" />
-  </video>
+    <video
+      class="absolute -z-10 h-full w-full object-cover"
+      muted
+      autoplay
+      loop
+      disablepictureinpicture
+      playsinline
+    >
+      <source src="/bg-video.mp4" type="video/mp4" />
+    </video>
 
-  <a href="#main" class="absolute bottom-4 animate-bounce" title="Scroll down">
-    <ChevronsDown size="48" class="text-black" />
-  </a>
+    <a
+      href="#main"
+      class="absolute bottom-4 animate-bounce"
+      title="Scroll down"
+    >
+      <ChevronsDown size="48" class="text-black" />
+    </a>
+  </div>
+
+  <div
+    data-zitdevs-id="loading"
+    class="absolute left-0 top-0 grid h-full w-full place-content-center"
+  >
+    <div
+      data-zitdevs-id="loading-step-1"
+      class="absolute left-0 top-0 grid h-full w-full place-content-center bg-black transition-opacity"
+    >
+      <Logo
+        width="290"
+        height="200"
+        viewBox="0 0 340 168"
+        class="animate-pulse"
+      />
+    </div>
+
+    <div
+      data-zitdevs-id="loading-step-2"
+      class="absolute left-0 top-0 hidden h-full w-full place-content-center bg-white"
+    >
+      <div class="text-center text-black">
+        <p class="text-6xl">Llevando</p>
+        <p class="text-8xl font-bold uppercase">La Chercha</p>
+        <p class="text-4xl">A otro Level</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  .loading-hero {
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  [data-zitdevs-id="video-content"] {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+</style>
