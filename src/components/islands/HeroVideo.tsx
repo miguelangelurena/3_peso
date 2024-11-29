@@ -1,11 +1,9 @@
 import { ChevronsDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
-
-import { cn } from "@/lib/utils";
 
 import Logo from "../vectors/logo";
 import { useSteps } from "./hooks/useSteps";
+import { useAppStore } from "./stores/useAppStore";
 
 const Video = ({ onLoaded }: { onLoaded: () => void }) => (
   <video
@@ -93,13 +91,13 @@ const HeroContent = ({
 
 export const HeroVideo = () => {
   const steps = useSteps();
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const { heroVideoLoaded, setHeroVideoLoaded } = useAppStore();
 
   return (
     <section className="zdv-hero h-[45vh] max-h-[1900px] sm:h-[100vh]">
       {steps === 2 && (
-        <div className="relative h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
-          <Video onLoaded={() => setVideoLoaded(true)} />
+        <div className="relative flex h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
+          <Video onLoaded={() => setHeroVideoLoaded(true)} />
           <ScrollIndicator />
         </div>
       )}
@@ -113,12 +111,12 @@ export const HeroVideo = () => {
           initial={{ backgroundColor: "black" }}
           animate={{
             backgroundColor: steps === 0 ? "black" : "white",
-            opacity: steps === 2 && videoLoaded ? 0 : 1,
-            display: steps === 2 && videoLoaded ? "none" : "grid",
+            opacity: steps === 2 && heroVideoLoaded ? 0 : 1,
+            display: steps === 2 && heroVideoLoaded ? "none" : "grid",
           }}
         >
           <AnimatePresence>
-            <HeroContent steps={steps} videoLoaded={videoLoaded} />
+            <HeroContent steps={steps} videoLoaded={heroVideoLoaded} />
           </AnimatePresence>
         </motion.div>
       </div>
