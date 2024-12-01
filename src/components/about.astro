@@ -1,0 +1,45 @@
+---
+import Hero from "@/components/hero.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Logo from "./vectors/logo.astro";
+---
+
+<section class="h-screen w-screen bg-gradient-to-r from-white to-black to-50%">
+  <div class="grid h-full grid-cols-2">
+    <div class="flex items-center justify-center">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/RD4WHNbQQ1g?si=j-Wx7sh2Aq1wO8rs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+    <div class="flex items-center justify-center py-6">
+      <div class="max-w-[50%]">
+        <h1 class="mb-5 flex flex-col">
+          <Logo class="h-60 w-80" />
+          <p class="mb-3">Digital Creator</p>
+        </h1>
+        <p class="mb-3 text-balance">
+          Somos un grupo colectivo encargado de llevar la chercha a otro nivel,
+          de manera que usted, mi querida persona, disfrute este pequeño
+          pedacito de nosotros.
+        </p>
+        <p class="mb-3 text-balance">@3peso | @3pesotv</p>
+        <a
+          class="mt-4 inline-block rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+          href="https://www.youtube.com/@3Peso/videos"
+          target="_blank"
+        >
+          Mira el Último Episodio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
