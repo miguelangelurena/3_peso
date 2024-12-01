@@ -5,19 +5,37 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <BaseLayout>
   <Hero />
-  <section class="mx-auto max-w-screen-md py-32 text-center">
-    <h1 class="mb-5 flex flex-col">
-      <span class="text-5xl font-bold">Bienvenidos a 3Peso:</span>
-      <span class="text-2xl">¡Donde Lo Inesperado se Hace Realidad!</span>
-    </h1>
-
-    <p>
-      Sumérgete en un mundo de experimentos sociales, desafíos atrevidos y
-      confesiones auténticas. Aquí no solo verás, vivirás cada momento."
-    </p>
-
-    <a class="" href="https://www.youtube.com/@3Peso/videos" target="_blank">
-      Mira el Último Episodio
-    </a>
+  <section class="container mx-auto grid w-full grid-cols-2">
+    <!-- This is a place holder -->
+    <div class="flex items-center justify-center">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/RD4WHNbQQ1g?si=j-Wx7sh2Aq1wO8rs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+    <div class="flex h-screen items-center justify-center py-6">
+      <div class="max-w-[70%]">
+        <h1 class="mb-5 flex flex-col">
+          <span class="text-5xl font-bold">Bienvenidos a 3Peso:</span>
+          <span class="text-2xl">¡Donde Lo Inesperado se Hace Realidad!</span>
+        </h1>
+        <p class="mb-5 text-balance">
+          Sumérgete en un mundo de experimentos sociales, desafíos atrevidos y
+          confesiones auténticas. Aquí no solo verás, vivirás cada momento.
+        </p>
+        <a
+          class="mt-4 inline-block rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+          href="https://www.youtube.com/@3Peso/videos"
+          target="_blank"
+        >
+          Mira el Último Episodio
+        </a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
