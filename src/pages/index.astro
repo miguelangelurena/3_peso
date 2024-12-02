@@ -1,23 +1,11 @@
 ---
 import Hero from "@/components/hero.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import About from "../components/about.astro";
 ---
 
 <BaseLayout>
   <Hero />
-  <section class="mx-auto max-w-screen-md py-32 text-center">
-    <h1 class="mb-5 flex flex-col">
-      <span class="text-5xl font-bold">Bienvenidos a 3Peso:</span>
-      <span class="text-2xl">¡Donde Lo Inesperado se Hace Realidad!</span>
-    </h1>
-
-    <p>
-      Sumérgete en un mundo de experimentos sociales, desafíos atrevidos y
-      confesiones auténticas. Aquí no solo verás, vivirás cada momento."
-    </p>
-
-    <a class="" href="https://www.youtube.com/@3Peso/videos" target="_blank">
-      Mira el Último Episodio
-    </a>
-  </section>
+  <About />
 </BaseLayout>
