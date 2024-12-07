@@ -1,0 +1,42 @@
+---
+import Counter from "./islands/Counter";
+---
+
+<section
+  id="counter-section"
+  class="relative h-full w-full overflow-hidden bg-white p-8 text-center"
+>
+  <!-- Text Content -->
+  <div class="relative z-10">
+    <p
+      id="counter"
+      class="text-6xl font-black text-gray-900 sm:text-8xl md:text-9xl"
+    >
+      +<Counter value={800} client:only />K
+    </p>
+    <span
+      class="stroke-effect text-4xl font-black text-gray-600 sm:text-6xl md:text-8xl"
+      >RISAS EN</span
+    >
+    <img
+      class="mx-auto mt-4 block h-20 sm:h-24 md:h-28 lg:h-32"
+      src="/youtube-logo.png"
+      alt="YouTube Logo"
+    />
+  </div>
+
+  <!-- GIF -->
+  <img
+    class="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 rotate-45 opacity-25"
+    src="/rolf.webp"
+    alt="An emoji rolling on the floor laughing, with tears streaming from its eyes, expressing intense amusement."
+  />
+</section>
+
+<style>
+  .stroke-effect {
+    color: transparent;
+    -webkit-text-stroke: 2px #2d2d2d;
+    font-weight: 900;
+  }
+</style>
