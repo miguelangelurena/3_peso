@@ -11,16 +11,89 @@ import Header from "@/components/header.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>3Peso</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
-  <body class="bg-[#111111] text-white">
+  <body class="bg-[#121212] text-white">
     <Header />
     <slot />
+    <footer>
+      <section
+        id="counter-section"
+        class="relative h-full w-full overflow-hidden bg-[#f9f9f9] p-10 text-center"
+      >
+        <div class="relative z-10">
+          <h2
+            class="py-14 text-6xl font-black text-gray-900 sm:text-7xl md:text-8xl lg:text-9xl"
+          >
+            Contacto
+          </h2>
+        </div>
+
+        <img
+          class="absolute inset-1/2 z-0 h-[90%] max-w-[90%] -translate-x-1/2 -translate-y-1/2 opacity-25"
+          src="/social.webp"
+          alt="Logos of popular social media platforms such as Instagram, Facebook, and TikTok."
+        />
+      </section>
+
+      <section>
+        <div class="py-8">
+          <div class="mx-auto max-w-7xl px-6">
+            <div
+              class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
+            >
+              <div class="flex w-full justify-center md:w-auto">
+                <img
+                  class="w-30 h-auto"
+                  src="/colorful3.svg"
+                  alt="3Peso's logo"
+                />
+              </div>
+              <div class="flex space-x-6">
+                <a
+                  href="mailto:3pesotvshow@gmail.com"
+                  class="footer-link flex items-center"
+                >
+                  <i class="fas fa-envelope mr-2 inline-block h-6 w-6"></i>
+                  <span class="hidden md:inline-block">Email</span>
+                </a>
+                <a
+                  href="https://instagram.com/3peso"
+                  target="_blank"
+                  class="footer-link flex items-center"
+                >
+                  <i class="fab fa-instagram mr-2 inline-block h-6 w-6"></i>
+                  <span class="hidden md:inline-block">@3peso</span>
+                </a>
+                <a
+                  href="https://youtube.com/@3peso"
+                  target="_blank"
+                  class="footer-link flex items-center"
+                >
+                  <i class="fab fa-youtube mr-2 inline-block h-6 w-6"></i>
+                  <span class="hidden md:inline-block">@3peso</span>
+                </a>
+                <a
+                  href="https://x.com/3pesotv"
+                  target="_blank"
+                  class="footer-link flex items-center"
+                >
+                  <i class="fab fa-twitter mr-2 inline-block h-6 w-6"></i>
+                  <span class="hidden md:inline-block">3pesotv</span>
+                </a>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <p class="text-sm text-gray-200 opacity-80">
+                ©2025 | All rights reserved | 3pesotvshow | ZitDevs
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
-
-<style>
-  .bg-black {
-    background-color: #000;
-    overflow: hidden;
-  }
-</style>
