@@ -60,14 +60,14 @@ const HeroContent = ({
     return (
       <div className="text-center text-black">
         <motion.p
-          className="font-cursive text-6xl font-bold"
+          className="font-cursive text-4xl font-bold md:text-6xl"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
         >
           Llevando
         </motion.p>
         <motion.p
-          className="animate-pulse font-outline text-8xl font-bold uppercase"
+          className="animate-pulse font-outline text-6xl font-bold uppercase md:text-8xl"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -75,7 +75,7 @@ const HeroContent = ({
           La Chercha
         </motion.p>
         <motion.p
-          className="text-4xl"
+          className="text-2xl md:text-4xl"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1 }}
@@ -94,7 +94,7 @@ export const HeroVideo = () => {
   const { heroVideoLoaded, setHeroVideoLoaded } = useAppStore();
 
   return (
-    <section className="zdv-hero h-[45vh] max-h-[1900px] sm:h-[100vh]">
+    <section className="zdv-hero relative h-[45vh] max-h-[1900px] sm:h-[100vh]">
       {steps === 2 && (
         <div className="relative flex h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
           <Video onLoaded={() => setHeroVideoLoaded(true)} />
