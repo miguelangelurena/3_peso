@@ -1,5 +1,8 @@
 ---
+import { Instagram, Twitter, Youtube } from "lucide-astro";
+import { Mail } from "lucide-react";
 
+import FooterItem from "./FooterItem.astro";
 ---
 
 <footer>
@@ -10,40 +13,29 @@
           class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
         >
           <div class="flex w-full justify-center md:w-auto">
-            <img class="w-30 h-auto" src="/colorful3.svg" alt="3Peso's logo" />
+            <img
+              class="w-30 h-auto md:size-20"
+              src="/colorful3.svg"
+              alt="3Peso's logo"
+            />
           </div>
           <div class="flex space-x-6">
-            <a
-              href="mailto:3pesotvshow@gmail.com"
-              class="footer-link flex items-center"
-            >
-              <i class="fas fa-envelope mr-2 inline-block h-6 w-6"></i>
-              <span class="hidden md:inline-block">Email</span>
-            </a>
-            <a
-              href="https://instagram.com/3peso"
-              target="_blank"
-              class="footer-link flex items-center"
-            >
-              <i class="fab fa-instagram mr-2 inline-block h-6 w-6"></i>
-              <span class="hidden md:inline-block">@3peso</span>
-            </a>
-            <a
-              href="https://youtube.com/@3peso"
-              target="_blank"
-              class="footer-link flex items-center"
-            >
-              <i class="fab fa-youtube mr-2 inline-block h-6 w-6"></i>
-              <span class="hidden md:inline-block">@3peso</span>
-            </a>
-            <a
-              href="https://x.com/3pesotv"
-              target="_blank"
-              class="footer-link flex items-center"
-            >
-              <i class="fab fa-twitter mr-2 inline-block h-6 w-6"></i>
-              <span class="hidden md:inline-block">3pesotv</span>
-            </a>
+            <FooterItem href="mailto:3pesotvshow@gmail.com">
+              <Mail className="size-4" slot="icon" />
+              <span slot="text">Email</span>
+            </FooterItem>
+            <FooterItem href="https://instagram.com/3peso">
+              <Instagram className="size-4" slot="icon" />
+              <span slot="text">Instagram</span>
+            </FooterItem>
+            <FooterItem href="https://youtube.com/@3peso">
+              <Youtube className="size-4" slot="icon" />
+              <span slot="text">Youtube</span>
+            </FooterItem>
+            <FooterItem href="https://x.com/3pesotv">
+              <Twitter className="size-4" slot="icon" />
+              <span slot="text">Twitter</span>
+            </FooterItem>
           </div>
         </div>
         <div class="mt-6 text-center">
