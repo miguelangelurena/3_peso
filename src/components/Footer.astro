@@ -6,44 +6,40 @@ import FooterItem from "./FooterItem.astro";
 ---
 
 <footer>
-  <section>
-    <div class="py-8">
-      <div class="mx-auto max-w-7xl px-6">
-        <div
-          class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
-        >
-          <div class="flex w-full justify-center md:w-auto">
-            <img
-              class="w-30 h-auto md:size-20"
-              src="/colorful3.svg"
-              alt="3Peso's logo"
-            />
-          </div>
-          <div class="flex space-x-6">
-            <FooterItem href="mailto:3pesotvshow@gmail.com">
-              <Mail className="size-4" slot="icon" />
-              <span slot="text">Email</span>
-            </FooterItem>
-            <FooterItem href="https://instagram.com/3peso">
-              <Instagram className="size-4" slot="icon" />
-              <span slot="text">Instagram</span>
-            </FooterItem>
-            <FooterItem href="https://youtube.com/@3peso">
-              <Youtube className="size-4" slot="icon" />
-              <span slot="text">Youtube</span>
-            </FooterItem>
-            <FooterItem href="https://x.com/3pesotv">
-              <Twitter className="size-4" slot="icon" />
-              <span slot="text">Twitter</span>
-            </FooterItem>
-          </div>
-        </div>
-        <div class="mt-6 text-center">
-          <p class="text-sm text-gray-200 opacity-80">
-            ©2025 | All rights reserved | 3pesotvshow | ZitDevs
-          </p>
-        </div>
+  <section class="container mx-auto max-w-7xl px-6 py-8">
+    <div
+      class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
+    >
+      <div class="flex w-full justify-center md:w-auto">
+        <img
+          class="w-30 h-auto md:size-12"
+          src="/colorful3.svg"
+          alt="3Peso's logo"
+        />
       </div>
+      <div class="flex space-x-6">
+        <FooterItem href="mailto:3pesotvshow@gmail.com">
+          <Mail className="size-4" slot="icon" />
+          <span slot="text">Email</span>
+        </FooterItem>
+        <FooterItem href="https://instagram.com/3peso">
+          <Instagram className="size-4" slot="icon" />
+          <span slot="text">Instagram</span>
+        </FooterItem>
+        <FooterItem href="https://youtube.com/@3peso">
+          <Youtube className="size-4" slot="icon" />
+          <span slot="text">Youtube</span>
+        </FooterItem>
+        <FooterItem href="https://x.com/3pesotv">
+          <Twitter className="size-4" slot="icon" />
+          <span slot="text">Twitter</span>
+        </FooterItem>
+      </div>
+    </div>
+    <div class="mt-6 text-center">
+      <p class="text-sm text-gray-200 opacity-80">
+        ©2025 | All rights reserved | 3pesotvshow | ZitDevs
+      </p>
     </div>
   </section>
 </footer>
