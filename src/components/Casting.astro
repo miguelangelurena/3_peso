@@ -1,5 +1,5 @@
 ---
-
+import { ArrowRight } from "lucide-react";
 ---
 
 <head>
@@ -28,11 +28,16 @@
       ¡Asegúrate de suscribirte a nuestro boletín de casting para no perder
       ninguna oportunidad!
     </p>
-    <button
-      class="mt-6 rounded-full bg-white px-6 py-3 text-lg font-medium text-black shadow-lg transition hover:bg-gray-100"
-    >
-      Casting
-    </button>
+    <div class="mt-9">
+      <button
+        class="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-md border-2 border-white bg-dark p-2 px-6 text-white shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-white before:transition-all before:duration-300 hover:text-dark before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-300 lg:font-semibold"
+      >
+        Casting
+        <ArrowRight
+          className="size-5 justify-end text-gray-50 duration-100 ease-linear group-hover:text-dark"
+        />
+      </button>
+    </div>
   </div>
 
   <div class="absolute inset-0 bg-black bg-opacity-50"></div>

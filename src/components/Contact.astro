@@ -1,5 +1,5 @@
 ---
-
+import { ContactForm } from "./islands/ContactForm";
 ---
 
 <section id="contact" class="w-full bg-[#f9f9f9] py-10">
@@ -19,5 +19,7 @@
     />
   </div>
 
-  <div class="min-h-[200px]"></div>
+  <div class="mx-auto min-h-[200px] max-w-screen-sm text-dark">
+    <ContactForm client:idle />
+  </div>
 </section>
