@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/node": "^9.0.0",
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource/bad-script": "^5.1.0",
