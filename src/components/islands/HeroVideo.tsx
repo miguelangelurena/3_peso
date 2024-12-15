@@ -95,11 +95,11 @@ export const HeroVideo = () => {
 
   return (
     <section
-      className="zdv-hero relative h-[45vh] max-h-[1900px] sm:h-[100vh]"
+      className="zdv-hero relative h-[75vh] max-h-[2600px] sm:h-[100vh]"
       id="hero"
     >
       {steps === 2 && (
-        <div className="relative flex h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
+        <div className="relative flex h-[75vh] max-h-[2600px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
           <Video onLoaded={() => setHeroVideoLoaded(true)} />
           <ScrollIndicator />
         </div>
