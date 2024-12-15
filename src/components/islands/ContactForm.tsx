@@ -4,6 +4,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -120,12 +121,11 @@ export const ContactForm = () => {
     });
 
     if (req.ok) {
-      console.log("Datos enviados correctamente");
-    } else {
-      console.error("Error al enviar los datos");
+      form.reset();
+      return toast("Mensaje enviado correctamente");
     }
 
-    form.reset();
+    return toast.error("Error al enviar el mensaje, intenta de nuevo");
   };
 
   return (

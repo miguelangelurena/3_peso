@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/header.astro";
+import { Toaster } from "@/components/ui/sonner";
 ---
 
 <html lang="es">
@@ -20,6 +21,7 @@ import Header from "@/components/header.astro";
   <body class="bg-dark text-white">
     <Header />
     <slot />
+    <Toaster client:idle />
     <Footer />
   </body>
 </html>
