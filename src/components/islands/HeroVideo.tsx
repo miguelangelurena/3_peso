@@ -23,7 +23,7 @@ const Video = ({ onLoaded }: { onLoaded: () => void }) => (
 
 const ScrollIndicator = () => (
   <a
-    href="#main"
+    href="#about"
     className="absolute bottom-4 animate-bounce"
     title="Scroll down"
   >
@@ -94,7 +94,10 @@ export const HeroVideo = () => {
   const { heroVideoLoaded, setHeroVideoLoaded } = useAppStore();
 
   return (
-    <section className="zdv-hero relative h-[45vh] max-h-[1900px] sm:h-[100vh]">
+    <section
+      className="zdv-hero relative h-[45vh] max-h-[1900px] sm:h-[100vh]"
+      id="hero"
+    >
       {steps === 2 && (
         <div className="relative flex h-[45vh] max-h-[1900px] shrink-0 flex-col items-center justify-center text-white transition-all sm:h-[100vh]">
           <Video onLoaded={() => setHeroVideoLoaded(true)} />
@@ -102,24 +105,22 @@ export const HeroVideo = () => {
         </div>
       )}
 
-      <div className="absolute left-0 top-0 grid h-full w-full place-content-center">
-        <motion.div
-          className="absolute left-0 top-0 grid h-full w-full place-content-center transition-colors"
-          key="logo"
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          initial={{ backgroundColor: "black" }}
-          animate={{
-            backgroundColor: steps === 0 ? "black" : "white",
-            opacity: steps === 2 && heroVideoLoaded ? 0 : 1,
-            display: steps === 2 && heroVideoLoaded ? "none" : "grid",
-          }}
-        >
-          <AnimatePresence>
-            <HeroContent steps={steps} videoLoaded={heroVideoLoaded} />
-          </AnimatePresence>
-        </motion.div>
-      </div>
+      <motion.div
+        className="absolute left-0 top-0 grid h-full w-full place-content-center transition-colors"
+        key="logo"
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        initial={{ backgroundColor: "black" }}
+        animate={{
+          backgroundColor: steps === 0 ? "black" : "white",
+          opacity: steps === 2 && heroVideoLoaded ? 0 : 1,
+          display: steps === 2 && heroVideoLoaded ? "none" : "grid",
+        }}
+      >
+        <AnimatePresence>
+          <HeroContent steps={steps} videoLoaded={heroVideoLoaded} />
+        </AnimatePresence>
+      </motion.div>
       {/* Tailwind CSS JIT */}
       <span className="hidden animate-ping" />
     </section>
