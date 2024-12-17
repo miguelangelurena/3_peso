@@ -1,21 +1,27 @@
 ---
 import HeaderWrapper from "./islands/HeaderWrapper";
 import Logo from "./vectors/logo.astro";
+
+interface Props {
+  headerAnimation?: boolean;
+}
+
+const { headerAnimation } = Astro.props;
 ---
 
-<HeaderWrapper client:idle>
+<HeaderWrapper client:idle headerAnimation={headerAnimation}>
   <div class="container mx-auto flex max-w-7xl items-center justify-between">
     <!-- Logo -->
-    <a href="#top" class="py-2">
+    <a href="/#top" class="py-2">
       <Logo />
     </a>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:block">
       <ul class="flex space-x-10">
-        <li><a href="#about" class="hover:underline">Nosotros</a></li>
-        <li><a href="#casting" class="hover:underline">Casting</a></li>
-        <li><a href="#contact" class="hover:underline">Contáctanos</a></li>
+        <li><a href="/#about" class="hover:underline">Nosotros</a></li>
+        <li><a href="/#casting" class="hover:underline">Casting</a></li>
+        <li><a href="/#contact" class="hover:underline">Contáctanos</a></li>
       </ul>
     </nav>
 
@@ -42,7 +48,10 @@ import Logo from "./vectors/logo.astro";
   </div>
 
   <!-- Mobile Navigation -->
-  <nav id="mobile-menu" class="flex flex-col space-y-4 bg-dark/70 p-4">
+  <nav
+    id="mobile-menu"
+    class="flex flex-col space-y-4 bg-dark/70 p-4 md:hidden"
+  >
     <a href="#about" class="block hover:underline">Nosotros</a>
     <a href="#casting" class="block hover:underline">Casting</a>
     <a href="#contact" class="block hover:underline">Contáctanos</a>

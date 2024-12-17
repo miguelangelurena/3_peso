@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 import FooterItem from "./FooterItem.astro";
 ---
 
-<footer>
+<footer class="bg-dark text-white">
   <section class="container mx-auto max-w-7xl px-6 py-8">
     <div
       class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0"
@@ -36,20 +36,38 @@ import FooterItem from "./FooterItem.astro";
         </FooterItem>
       </div>
     </div>
-    <div class="mt-6 text-center">
-      <p class="text-sm text-gray-200 opacity-80">
-        ©2025 3Peso. Todos los derechos reservados.
-      </p>
+    <div class="mt-6">
+      <div>
+        <p class="text-sm text-gray-200 opacity-80">
+          ©2025 3Peso. Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="text-center">
+        <div class="space-x-2 text-xs">
+          <a href="/privacy-policy" class="hover:text-white hover:underline">
+            Política de Privacidad
+          </a>
+          <span class="text-gray-200 opacity-80"> | </span>
+          <a
+            href="/terms-and-conditions"
+            class="hover:text-white hover:underline"
+          >
+            Términos y Condiciones
+          </a>
+        </div>
 
-      <span class="text-sm text-gray-200 opacity-80">
-        <a
-          href="https://zitdevs.com"
-          target="_blank"
-          class="hover:text-white hover:underline"
-        >
-          En Colaboración con ZitDevs</a
-        >
-      </span>
+        <span class="text-sm text-gray-200 opacity-80">
+          <a
+            href="https://zitdevs.com"
+            target="_blank"
+            class="hover:text-white hover:underline"
+          >
+            En Colaboración con <span class="text-[#ff9977] underline"
+              >ZitDevs</span
+            ></a
+          >
+        </span>
+      </div>
     </div>
   </section>
 </footer>

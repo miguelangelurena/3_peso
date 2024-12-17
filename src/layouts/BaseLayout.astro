@@ -4,6 +4,15 @@ import "@/styles/globals.css";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/header.astro";
 import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
+
+interface Props {
+  title?: string;
+  bg?: "dark" | "light";
+  headerAnimation?: boolean;
+}
+
+const { title, bg = "dark", headerAnimation = true } = Astro.props;
 ---
 
 <html lang="es">
@@ -12,7 +21,7 @@ import { Toaster } from "@/components/ui/sonner";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>3Peso</title>
+    <title>{title ? `3Peso | ${title}` : "3Peso"}</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,8 +45,10 @@ import { Toaster } from "@/components/ui/sonner";
     />
     <meta name="twitter:image" content="https://3peso.com/og-image.png" />
   </head>
-  <body class="bg-dark text-white">
-    <Header />
+  <body
+    class={cn("bg-dark text-white", bg === "light" && "bg-white text-dark")}
+  >
+    <Header headerAnimation={headerAnimation} />
     <slot />
     <Toaster client:idle />
     <Footer />
