@@ -23,6 +23,7 @@
     "@astrojs/node": "^9.0.0",
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/vercel": "^10.0.6",
     "@fontsource/bad-script": "^5.1.0",
     "@fontsource/londrina-outline": "^5.1.0",
     "@hookform/resolvers": "^3.9.1",
