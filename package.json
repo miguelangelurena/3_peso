@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/node": "^9.0.0",
-    "@astrojs/react": "^3.6.3",
+    "@astrojs/react": "^5.0.4",
     "@astrojs/tailwind": "^5.1.2",
     "@astrojs/vercel": "^10.0.6",
     "@fontsource/bad-script": "^5.1.0",
@@ -34,7 +34,7 @@
     "@supabase/supabase-js": "^2.47.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "astro": "^4.16.16",
+    "astro": "^6.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.14.4",
